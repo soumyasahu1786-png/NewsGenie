@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Personalized Feed</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <h1><img src="{{ url_for('static', filename='logo.jpg') }}"  alt="Logo"> Personalized Feed</h1>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/feed">Feed</a>
+      <a href="#">Upcoming</a>
+    </div>
+  </nav>
+
+  <div class="feed-container">
+    <h1>🌟 Your Personalized Feed</h1>
+    <div style="text-align:center; margin-bottom:1rem;">
+      <button class="refresh-btn" onclick="fetchFeed()">🔄 Refresh</button>
+    </div>
+    <div id="news-container"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
